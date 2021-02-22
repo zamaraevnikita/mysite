@@ -25,7 +25,7 @@ SECRET_KEY = 'ne0(lop26p@py_xk)!y4d&32p+3l!f+jtick%unb_(7c3k!_pj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["Orie.pythonanywhere.com"]
 
 
 # Application definition
