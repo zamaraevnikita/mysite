@@ -25,12 +25,13 @@ SECRET_KEY = 'ne0(lop26p@py_xk)!y4d&32p+3l!f+jtick%unb_(7c3k!_pj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["Orie.pythonanywhere.com", '127.0.0.1' , 'localhost']
+ALLOWED_HOSTS = ["Orie.pythonanywhere.com", '127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
