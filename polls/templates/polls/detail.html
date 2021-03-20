@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>{{question.text}}</h1>
+    {% if question.choice_set.all %}
+        <form method="POST" action="{% url 'polls:vote' question.pk %}">
+            {% csrf_token %}
+            {% for c in question.choice_set.all %}
+                <input type="checkbox" name="choice" id="c{{c.pk}}" value="{{c.pk}}"><label for="c{{c.pk}}">{{c.text}}</label>
+                <br>
+            {% endfor %} 
+
+            <button type="submit">SUBMIT</button>
+        </form>
+    {% endif %}
+</body>
+</html>

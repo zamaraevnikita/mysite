@@ -1,6 +1,5 @@
 from django.db import models
-from django.db import models
-#Модель для обработки вопроса
+#Модуль для обработки вопроса
 class Question(models.Model):
     text = models.CharField(max_length=500)
     pub_date = models.DateField('date published')
@@ -8,7 +7,7 @@ class Question(models.Model):
     def __str__(self):
         return self.text
 
-#Модель для обработки варианта ответа на вопрос
+#Модуль для обработки варианта ответа на вопрос
 class Choice(models.Model):
     #связываем question и choices
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
